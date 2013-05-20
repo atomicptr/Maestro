@@ -1,5 +1,5 @@
 {
-    "version": 0.1,
+    "version": 0.2,
     "download_url": "https://github.com/Kasoki/Maestro/blob/master/Maestro.alfredworkflow?raw=true",
-    "description": "initial release"
+    "description": "fixed a bug related to playlist selection"
 }
