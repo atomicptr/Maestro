@@ -28,6 +28,17 @@
 				<string></string>
 			</dict>
 		</array>
+		<key>41AD0C78-5129-49F3-B344-3BDEF7514FEC</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>4572E0FF-5596-4C55-968A-23ED325C7B99</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
 		<key>E8484861-ACE8-4AA5-86AD-7FCBE450F72D</key>
 		<array>
 			<dict>
@@ -126,6 +137,29 @@ echo $VAR</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>output</key>
+				<integer>0</integer>
+				<key>removeextension</key>
+				<false/>
+				<key>sticky</key>
+				<false/>
+				<key>text</key>
+				<string>Use "play" to recache your album artwork!</string>
+				<key>title</key>
+				<string>Maestro: Recache allowed</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>4572E0FF-5596-4C55-968A-23ED325C7B99</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>keyword</key>
@@ -173,6 +207,11 @@ echo $VAR</string>
 			<real>130</real>
 		</dict>
 		<key>41AD0C78-5129-49F3-B344-3BDEF7514FEC</key>
+		<dict>
+			<key>ypos</key>
+			<real>250</real>
+		</dict>
+		<key>4572E0FF-5596-4C55-968A-23ED325C7B99</key>
 		<dict>
 			<key>ypos</key>
 			<real>250</real>
