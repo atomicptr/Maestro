@@ -87,7 +87,6 @@ try:
 
 	for track in playlist_tracks:
 		if handler.query.lower() in track["name"].lower() or handler.query.lower() in track["artist"].lower():
-			#print get_artwork(track["name"])
 			handler.add_new_item(title=track["name"], subtitle=track["artist"], arg=track["name"], icon=get_artwork(track["name"]))
 			anything_matched = True
 
@@ -121,7 +120,7 @@ if not anything_matched:
 
 			for playlist in playlist_list:
 				if handler.query.lower() in playlist["name"].lower():
-					handler.add_new_item(title=playlist["name"], subtitle="%s songs in this playlist." % playlist["count"], icon="default.png", arg=playlist)
+					handler.add_new_item(title=playlist["name"], subtitle="%s songs in this playlist." % playlist["count"], icon="default.png", arg=playlist["name"])
 		else:
 			handler.add_new_item(title="No playlists found", icon="default.png")
 	else:
