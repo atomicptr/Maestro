@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>de.kasoki.alfredworkflows.maestro</string>
+	<key>connections</key>
+	<dict>
+		<key>2D8E60C2-B2D6-4D1D-A0AB-65731E4D57E1</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>41AD0C78-5129-49F3-B344-3BDEF7514FEC</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>38131BC4-8281-46BA-ACA6-77866DA91358</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E56CF216-E9B3-424D-99CE-32520736B596</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>E8484861-ACE8-4AA5-86AD-7FCBE450F72D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E56CF216-E9B3-424D-99CE-32520736B596</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Christopher Kaster (@Kasoki)</string>
+	<key>description</key>
+	<string>Tell iTunes to play a specific song in your current Playlist</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Maestro</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>script</key>
+				<string>osascript play_song.scpt {query}</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.script</string>
+			<key>uid</key>
+			<string>E56CF216-E9B3-424D-99CE-32520736B596</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>keyword</key>
+				<string>play</string>
+				<key>runningsubtext</key>
+				<string>Loading...</string>
+				<key>script</key>
+				<string>VAR=$(python maestro.py {query})
+
+echo $VAR</string>
+				<key>subtext</key>
+				<string>Tell iTunes to play a song</string>
+				<key>title</key>
+				<string>Maeostro</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>E8484861-ACE8-4AA5-86AD-7FCBE450F72D</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>keyword</key>
+				<string>maestro</string>
+				<key>runningsubtext</key>
+				<string>Loading...</string>
+				<key>script</key>
+				<string>VAR=$(python maestro.py {query})
+
+echo $VAR</string>
+				<key>subtext</key>
+				<string>Tell iTunes to play a song</string>
+				<key>title</key>
+				<string>Maestro</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>38131BC4-8281-46BA-ACA6-77866DA91358</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>maestro recache</string>
+				<key>subtext</key>
+				<string>Recache all artworks</string>
+				<key>text</key>
+				<string>Maestro: Recache</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>2D8E60C2-B2D6-4D1D-A0AB-65731E4D57E1</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>script</key>
+				<string>rm .disallow-recache</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>41AD0C78-5129-49F3-B344-3BDEF7514FEC</string>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>Icon designed by Nathan Driskell from The Noun Project</string>
+	<key>uidata</key>
+	<dict>
+		<key>2D8E60C2-B2D6-4D1D-A0AB-65731E4D57E1</key>
+		<dict>
+			<key>ypos</key>
+			<real>250</real>
+		</dict>
+		<key>38131BC4-8281-46BA-ACA6-77866DA91358</key>
+		<dict>
+			<key>ypos</key>
+			<real>130</real>
+		</dict>
+		<key>41AD0C78-5129-49F3-B344-3BDEF7514FEC</key>
+		<dict>
+			<key>ypos</key>
+			<real>250</real>
+		</dict>
+		<key>E56CF216-E9B3-424D-99CE-32520736B596</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+		<key>E8484861-ACE8-4AA5-86AD-7FCBE450F72D</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>http://kasoki.de</string>
+</dict>
+</plist>
