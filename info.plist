@@ -89,6 +89,8 @@ echo $VAR</string>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>E8484861-ACE8-4AA5-86AD-7FCBE450F72D</string>
+			<key>version</key>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -104,6 +106,8 @@ echo $VAR</string>
 			<string>alfred.workflow.output.script</string>
 			<key>uid</key>
 			<string>E56CF216-E9B3-424D-99CE-32520736B596</string>
+			<key>version</key>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -133,40 +137,8 @@ echo $VAR</string>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>38131BC4-8281-46BA-ACA6-77866DA91358</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>escaping</key>
-				<integer>127</integer>
-				<key>script</key>
-				<string>rm .disallow-recache</string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>41AD0C78-5129-49F3-B344-3BDEF7514FEC</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>maestro recache</string>
-				<key>subtext</key>
-				<string>Recache all artworks</string>
-				<key>text</key>
-				<string>Maestro: Recache</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>2D8E60C2-B2D6-4D1D-A0AB-65731E4D57E1</string>
+			<key>version</key>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -190,6 +162,46 @@ echo $VAR</string>
 			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
 			<string>4572E0FF-5596-4C55-968A-23ED325C7B99</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>maestro recache</string>
+				<key>subtext</key>
+				<string>Recache all artworks</string>
+				<key>text</key>
+				<string>Maestro: Recache</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>2D8E60C2-B2D6-4D1D-A0AB-65731E4D57E1</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>script</key>
+				<string>rm .disallow-recache</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>41AD0C78-5129-49F3-B344-3BDEF7514FEC</string>
+			<key>version</key>
+			<integer>0</integer>
 		</dict>
 	</array>
 	<key>readme</key>

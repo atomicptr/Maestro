@@ -81,6 +81,9 @@ try:
 		track_artist = info[0]
 		track_name = info[1]
 
+		if "'" in track_name:
+			track_name = track_name.replace("'", "`")
+
 		playlist_tracks.append({"artist": track_artist, "name": track_name})
 
 	
