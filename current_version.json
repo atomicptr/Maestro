@@ -1,5 +1,5 @@
 {
-    "version": 0.2,
+    "version": 0.3,
     "download_url": "https://github.com/Kasoki/Maestro/blob/master/Maestro.alfredworkflow?raw=true",
-    "description": "fixed a bug related to playlist selection"
+    "description": "fix a bug which occurs when a song's title has an apostrophe"
 }
