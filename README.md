@@ -16,3 +16,8 @@ Licence
 --------
 
 This workflow is licenced under the terms of the [MIT Licence](http://opensource.org/licenses/MIT)
+
+Dependencies
+------------
+
+* [python-romkan](https://pypi.python.org/pypi/romkan) - [Licence](romkan_LICENCE)
