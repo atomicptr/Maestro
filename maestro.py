@@ -86,22 +86,25 @@ try:
 		info = raw_info.split('!MAESTRO!')
 		track_artist = info[0]
 		track_name = info[1]
+		album_name = info[2]
 
 		if "'" in track_name:
 			track_name = track_name.replace("'", "`")
 
-		playlist_tracks.append({"artist": track_artist, "name": track_name})
+		playlist_tracks.append({"artist": track_artist, "name": track_name, "album": album_name})
 
 	
 
 	for track in playlist_tracks:
 		match_in_name = handler.query.lower() in track["name"].lower()
 		match_in_artist = handler.query.lower() in track["artist"].lower()
+		match_in_album = handler.query.lower() in track["album"].lower()
 		match_in_name_kana = handler.query.lower() in romkan.to_roma(unicode(track["name"], "utf-8"))
 		match_in_artist_kana = handler.query.lower() in romkan.to_roma(unicode(track["artist"], "utf-8"))
+		match_in_album_kana = handler.query.lower() in romkan.to_roma(unicode(track["album"], "utf-8"))
 
-		if match_in_name or match_in_artist or match_in_name_kana or match_in_artist_kana:
-			handler.add_new_item(title=track["name"], subtitle=track["artist"], arg=track["name"], icon=get_artwork(track["name"]))
+		if match_in_name or match_in_artist or match_in_album or match_in_name_kana or match_in_artist_kana or match_in_album_kana:
+			handler.add_new_item(title=track["name"], subtitle="%s [%s]" % (track["artist"], track["album"]), arg=track["name"], icon=get_artwork(track["name"]))
 			anything_matched = True
 
 except:
