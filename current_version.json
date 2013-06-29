@@ -1,5 +1,5 @@
 {
-    "version": 0.4,
+    "version": 0.5,
     "download_url": "https://github.com/Kasoki/Maestro/blob/master/Maestro.alfredworkflow?raw=true",
-    "description": "add the ability to search hiragana and katakana kana as roman strings"
+    "description": "add the ability to search albums"
 }
