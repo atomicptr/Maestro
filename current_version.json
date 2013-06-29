@@ -1,5 +1,5 @@
 {
-    "version": 0.3,
+    "version": 0.4,
     "download_url": "https://github.com/Kasoki/Maestro/blob/master/Maestro.alfredworkflow?raw=true",
-    "description": "fix a bug which occurs when a song's title has an apostrophe"
+    "description": "add the ability to search hiragana and katakana kana as roman strings"
 }
