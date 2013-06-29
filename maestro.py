@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 # Copyright (c) 2013 Christopher Kaster (@Kasoki)
 # 
 # This file is part of Maestro <https://github.com/Kasoki/Maestro>
@@ -24,6 +26,7 @@ import sys
 import os
 import hashlib
 import Alfred
+import romkan
 
 handler = Alfred.Handler(sys.argv, use_no_query_string=False)
 
@@ -32,6 +35,9 @@ playlist_name = ""
 
 # IMPORTANT: If you change this value you also need to change it in the workflow!
 recache_identifier = ".disallow-recache"
+
+# for debug purpose
+#handler.query = "hito"
 
 user_home = os.path.expanduser("~")
 artwork_cache_path = os.path.join(user_home, ".maestro-cache/")
@@ -89,7 +95,12 @@ try:
 	
 
 	for track in playlist_tracks:
-		if handler.query.lower() in track["name"].lower() or handler.query.lower() in track["artist"].lower():
+		match_in_name = handler.query.lower() in track["name"].lower()
+		match_in_artist = handler.query.lower() in track["artist"].lower()
+		match_in_name_kana = handler.query.lower() in romkan.to_roma(unicode(track["name"], "utf-8"))
+		match_in_artist_kana = handler.query.lower() in romkan.to_roma(unicode(track["artist"], "utf-8"))
+
+		if match_in_name or match_in_artist or match_in_name_kana or match_in_artist_kana:
 			handler.add_new_item(title=track["name"], subtitle=track["artist"], arg=track["name"], icon=get_artwork(track["name"]))
 			anything_matched = True
 
