@@ -1,5 +1,5 @@
 {
-    "version": 0.5,
+    "version": 0.6,
     "download_url": "https://github.com/Kasoki/Maestro/blob/master/Maestro.alfredworkflow?raw=true",
-    "description": "add the ability to search albums"
+    "description": "add various new commands, such as next, previous, random and pause"
 }

@@ -6,6 +6,28 @@
 	<string>de.kasoki.alfredworkflows.maestro</string>
 	<key>connections</key>
 	<dict>
+		<key>04212233-DD3E-4725-B9D6-754D1692A924</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>58735C6E-F758-4964-8FA5-BDFDE4DF8EF3</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>079624FA-7334-4032-98C3-0405666840FB</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>8225CD39-5A42-4689-9C08-1FB2E42CAC32</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
 		<key>2D8E60C2-B2D6-4D1D-A0AB-65731E4D57E1</key>
 		<array>
 			<dict>
@@ -39,6 +61,28 @@
 				<string></string>
 			</dict>
 		</array>
+		<key>C1BA45C7-681A-4573-A5B5-65E7A21A9096</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>ADD65577-8904-4E9A-87A6-556CA910A16F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>E7F00A0D-7DBF-411A-B122-DDF5C6A6F8C9</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>0EE15FDA-056F-44B7-B6FE-DE610A1BF1C8</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
 		<key>E8484861-ACE8-4AA5-86AD-7FCBE450F72D</key>
 		<array>
 			<dict>
@@ -64,6 +108,23 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>script</key>
+				<string>osascript play_song.scpt {query}</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.script</string>
+			<key>uid</key>
+			<string>E56CF216-E9B3-424D-99CE-32520736B596</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
@@ -77,9 +138,9 @@
 
 echo $VAR</string>
 				<key>subtext</key>
-				<string>Tell iTunes to play a song</string>
+				<string>Tell iTunes to play a specific song</string>
 				<key>title</key>
-				<string>Maeostro</string>
+				<string>Maestro</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -89,23 +150,6 @@ echo $VAR</string>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>E8484861-ACE8-4AA5-86AD-7FCBE450F72D</string>
-			<key>version</key>
-			<integer>0</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>escaping</key>
-				<integer>127</integer>
-				<key>script</key>
-				<string>osascript play_song.scpt {query}</string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.script</string>
-			<key>uid</key>
-			<string>E56CF216-E9B3-424D-99CE-32520736B596</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
@@ -143,6 +187,44 @@ echo $VAR</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>script</key>
+				<string>rm .disallow-recache</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>41AD0C78-5129-49F3-B344-3BDEF7514FEC</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>maestro recache</string>
+				<key>subtext</key>
+				<string>Recache all artworks</string>
+				<key>text</key>
+				<string>Maestro: Recache</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>2D8E60C2-B2D6-4D1D-A0AB-65731E4D57E1</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
@@ -171,35 +253,133 @@ echo $VAR</string>
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>keyword</key>
-				<string>maestro recache</string>
+				<string>pause</string>
 				<key>subtext</key>
-				<string>Recache all artworks</string>
+				<string>Play/Pause iTunes.</string>
 				<key>text</key>
-				<string>Maestro: Recache</string>
+				<string>Play/Pause</string>
 				<key>withspace</key>
 				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
-			<string>2D8E60C2-B2D6-4D1D-A0AB-65731E4D57E1</string>
+			<string>079624FA-7334-4032-98C3-0405666840FB</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>escaping</key>
-				<integer>127</integer>
-				<key>script</key>
-				<string>rm .disallow-recache</string>
-				<key>type</key>
-				<integer>0</integer>
+				<key>command</key>
+				<integer>1</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.script</string>
+			<string>alfred.workflow.action.itunescommand</string>
 			<key>uid</key>
-			<string>41AD0C78-5129-49F3-B344-3BDEF7514FEC</string>
+			<string>8225CD39-5A42-4689-9C08-1FB2E42CAC32</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>command</key>
+				<integer>4</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.itunescommand</string>
+			<key>uid</key>
+			<string>ADD65577-8904-4E9A-87A6-556CA910A16F</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>random</string>
+				<key>subtext</key>
+				<string>Tells iTunes to play a random album.</string>
+				<key>text</key>
+				<string>Play random album</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>C1BA45C7-681A-4573-A5B5-65E7A21A9096</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>next</string>
+				<key>subtext</key>
+				<string>Tells iTunes to play the next track.</string>
+				<key>text</key>
+				<string>Next track</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>E7F00A0D-7DBF-411A-B122-DDF5C6A6F8C9</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>command</key>
+				<integer>2</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.itunescommand</string>
+			<key>uid</key>
+			<string>0EE15FDA-056F-44B7-B6FE-DE610A1BF1C8</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>command</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.itunescommand</string>
+			<key>uid</key>
+			<string>58735C6E-F758-4964-8FA5-BDFDE4DF8EF3</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>previous</string>
+				<key>subtext</key>
+				<string>Tell iTunes to play the previous track</string>
+				<key>text</key>
+				<string>Previous track</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>04212233-DD3E-4725-B9D6-754D1692A924</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
@@ -208,6 +388,21 @@ echo $VAR</string>
 	<string>Icon designed by Nathan Driskell from The Noun Project</string>
 	<key>uidata</key>
 	<dict>
+		<key>04212233-DD3E-4725-B9D6-754D1692A924</key>
+		<dict>
+			<key>ypos</key>
+			<real>740</real>
+		</dict>
+		<key>079624FA-7334-4032-98C3-0405666840FB</key>
+		<dict>
+			<key>ypos</key>
+			<real>370</real>
+		</dict>
+		<key>0EE15FDA-056F-44B7-B6FE-DE610A1BF1C8</key>
+		<dict>
+			<key>ypos</key>
+			<real>620</real>
+		</dict>
 		<key>2D8E60C2-B2D6-4D1D-A0AB-65731E4D57E1</key>
 		<dict>
 			<key>ypos</key>
@@ -228,10 +423,35 @@ echo $VAR</string>
 			<key>ypos</key>
 			<real>250</real>
 		</dict>
+		<key>58735C6E-F758-4964-8FA5-BDFDE4DF8EF3</key>
+		<dict>
+			<key>ypos</key>
+			<real>740</real>
+		</dict>
+		<key>8225CD39-5A42-4689-9C08-1FB2E42CAC32</key>
+		<dict>
+			<key>ypos</key>
+			<real>370</real>
+		</dict>
+		<key>ADD65577-8904-4E9A-87A6-556CA910A16F</key>
+		<dict>
+			<key>ypos</key>
+			<real>500</real>
+		</dict>
+		<key>C1BA45C7-681A-4573-A5B5-65E7A21A9096</key>
+		<dict>
+			<key>ypos</key>
+			<real>500</real>
+		</dict>
 		<key>E56CF216-E9B3-424D-99CE-32520736B596</key>
 		<dict>
 			<key>ypos</key>
 			<real>10</real>
+		</dict>
+		<key>E7F00A0D-7DBF-411A-B122-DDF5C6A6F8C9</key>
+		<dict>
+			<key>ypos</key>
+			<real>620</real>
 		</dict>
 		<key>E8484861-ACE8-4AA5-86AD-7FCBE450F72D</key>
 		<dict>
