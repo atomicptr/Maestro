@@ -17,8 +17,9 @@ tell application "iTunes"
 		set track_artist to the artist of playlist_track
 		set track_name to the name of the playlist_track
 		set album_name to the album of playlist_track
+		set track_id to the database ID of playlist_track
 
-		set end of return_list to track_artist & "!MAESTRO!" & track_name & "!MAESTRO!" & album_name
+		set end of return_list to track_artist & "!MAESTRO!" & track_name & "!MAESTRO!" & album_name & "!MAESTRO!" & track_id
 	end repeat
 
 	set playlist_tracks_string to my joinList("\n", return_list)

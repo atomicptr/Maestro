@@ -87,13 +87,9 @@ try:
 		track_artist = info[0]
 		track_name = info[1]
 		album_name = info[2]
+		track_id = info[3]
 
-		if "'" in track_name:
-			track_name = track_name.replace("'", "`")
-
-		playlist_tracks.append({"artist": track_artist, "name": track_name, "album": album_name})
-
-
+		playlist_tracks.append({"artist": track_artist, "name": track_name, "album": album_name, "track_id": track_id})
 
 	for track in playlist_tracks:
 		match_in_name = handler.query.lower() in track["name"].lower()
@@ -109,7 +105,7 @@ try:
 				subtitle = "%s [%s]" % (track["artist"], track["album"])
 			else:
 				subtitle = track["artist"]
-			handler.add_new_item(title=track["name"], subtitle=subtitle, arg=track["name"], icon=get_artwork(track["name"]))
+			handler.add_new_item(title=track["name"], subtitle=subtitle, arg=track["track_id"], icon=get_artwork(track["name"]))
 			anything_matched = True
 
 except:
