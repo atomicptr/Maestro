@@ -117,13 +117,13 @@
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
-				<integer>127</integer>
+				<integer>118</integer>
 				<key>keyword</key>
 				<string>play</string>
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string>VAR=$(python maestro.py {query})
+				<string>VAR=$(python maestro.py "{query}")
 
 echo $VAR</string>
 				<key>subtext</key>
@@ -148,13 +148,13 @@ echo $VAR</string>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
-				<integer>127</integer>
+				<integer>118</integer>
 				<key>keyword</key>
 				<string>maestro</string>
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string>VAR=$(python maestro.py {query})
+				<string>VAR=$(python maestro.py "{query}")
 
 echo $VAR</string>
 				<key>subtext</key>
