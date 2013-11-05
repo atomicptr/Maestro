@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # Copyright (c) 2013 Christopher Kaster (@Kasoki)
-# 
+#
 # This file is part of Maestro <https://github.com/Kasoki/Maestro>
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -10,10 +10,10 @@
 # to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 # copies of the Software, and to permit persons to whom the Software is
 # furnished to do so, subject to the following conditions:
-# 
+#
 # The above copyright notice and this permission notice shall be included in
 # all copies or substantial portions of the Software.
-# 
+#
 # THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 # IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 # FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -87,13 +87,9 @@ try:
 		track_artist = info[0]
 		track_name = info[1]
 		album_name = info[2]
+		track_id = info[3]
 
-		if "'" in track_name:
-			track_name = track_name.replace("'", "`")
-
-		playlist_tracks.append({"artist": track_artist, "name": track_name, "album": album_name})
-
-	
+		playlist_tracks.append({"artist": track_artist, "name": track_name, "album": album_name, "track_id": track_id})
 
 	for track in playlist_tracks:
 		match_in_name = handler.query.lower() in track["name"].lower()
@@ -104,7 +100,12 @@ try:
 		match_in_album_kana = handler.query.lower() in romkan.to_roma(unicode(track["album"], "utf-8"))
 
 		if match_in_name or match_in_artist or match_in_album or match_in_name_kana or match_in_artist_kana or match_in_album_kana:
-			handler.add_new_item(title=track["name"], subtitle="%s [%s]" % (track["artist"], track["album"]), arg=track["name"], icon=get_artwork(track["name"]))
+			subtitle = None
+			if len(track["album"]) > 0:
+				subtitle = "%s [%s]" % (track["artist"], track["album"])
+			else:
+				subtitle = track["artist"]
+			handler.add_new_item(title=track["name"], subtitle=subtitle, arg=track["track_id"], icon=get_artwork(track["name"]))
 			anything_matched = True
 
 except:

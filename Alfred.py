@@ -1,5 +1,5 @@
 # Copyright (c) 2013 Christopher Kaster (@Kasoki)
-# 
+#
 # This file is part of alfred.py <https://github.com/Kasoki/alfred.py>
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -8,10 +8,10 @@
 # to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 # copies of the Software, and to permit persons to whom the Software is
 # furnished to do so, subject to the following conditions:
-# 
+#
 # The above copyright notice and this permission notice shall be included in
 # all copies or substantial portions of the Software.
-# 
+#
 # THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 # IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 # FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -20,6 +20,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 import os
+from xml.sax.saxutils import escape
 
 """ IMPORTANT: Not sure how to use this lib? Check out the "example.py" file :) """
 
@@ -36,7 +37,7 @@ class Handler:
 		query -- This string should only be used if args is not set!
 		use_no_query_string -- If there is no query, should the handler use "NO QUERY" instead of one?
 
-		""" 
+		"""
 		if type(args) != list:
 			raise TypeError("Alfred.Handler(args): args is no list!")
 
@@ -128,7 +129,7 @@ class Handler:
 
 		Keyword arguments:
 		max_results -- How many results should be in this string? (Default: None - No limitation)
-		
+
 		"""
 
 		counter = 1
@@ -156,10 +157,10 @@ class Item:
 		icon -- The icon of this item (Default: None)
 
 		"""
-		self.title = title
-		self.subtitle = subtitle
+		self.title = escape(title)
+		self.subtitle = escape(subtitle)
 		self.uid = uid
-		self.arg = arg
+		self.arg = escape(arg)
 		self.icon = icon
 
 	def __str__(self):
